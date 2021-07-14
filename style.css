@@ -1,0 +1,296 @@
+/* import google fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+  background-color: rgb(248, 245, 245);
+}
+
+
+
+/* --------------
+heading start 
+----------------- */
+
+.top-header{
+    background-color: rgb(16, 60, 180);
+    margin: -8px;
+}
+
+
+
+.top-banner{
+    display: flex;
+    align-items: center;
+    
+    padding: 50px 0px 150px 200px;
+}
+.top-heading h1{
+    font-size: 64px;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+
+}
+.btn{
+    text-decoration: none;
+    font-weight: 500;
+    color: white;
+    padding: 7px 14px ;
+    background-color: rgb(112, 4, 71);
+    border: 2px solid rgb(112, 4, 71) ;
+    border-radius: 3px;
+    transition: .3s;
+}
+    .btn:hover{
+          color: rgb(112, 4, 71);
+          box-shadow: 2px 2px 10px -2px rgb(112, 4, 71);
+          background-color: #fff;
+    }
+
+
+.banner-img{
+    margin-left: 300px;
+}
+.banner-img img{
+  
+    width: 60%;
+    
+}
+
+/* card item style 
+------------------
+----------------- */
+.all-players{
+    display: flex;
+    justify-content: center;
+    margin: 100px 0px 100px 0px ;
+}
+.players{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+    
+}
+.player-cards {
+   height: 470px;
+   width: 300px;
+   border-radius: 5px;
+   padding: 20px;
+   background-color: #fff;
+   transition: .2s;
+}
+.player-cards:hover{
+    transform: scale(1.03) ;
+    box-shadow: 2px 2px 15px -3px lightgreen;
+
+}
+.player-cards img{
+    width: 100%;
+    border-radius: 5px;
+}
+.player-cards p{
+    color: gray;
+    font-size: 15px;
+}
+/* highlight part */
+
+.highlight {
+    display: flex;
+    align-items: center;
+    height: 565px;
+    margin: 0 350px 100px 250px;
+}
+.highlight .image img {
+    width: 100%;
+}
+.highlight article{
+    margin: 0 120px;
+}
+.highlight article h1{
+    font-size: 55px;
+    font-weight: 700;
+}
+.highlight article p{
+    font-size: 12px;
+    color: gray;
+    margin-bottom: 30px;
+}
+.highlight article h1 span{
+    color: rgb(145, 24, 60);
+}
+
+.btn2{
+    text-decoration: none;
+    font-weight: 500;
+    color: white;
+    padding: 7px 14px ;
+    background-color: rgb(112, 4, 71);
+    border-radius: 3px;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.btn2::before{
+    content: '';
+    height: 100%;
+    width: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(65, 4, 41);
+    
+    z-index: -1;
+    transition: 1s;
+}
+.btn2:hover::before{
+    height: 100%;
+    width: 100%;
+ }
+
+
+/* another part  */
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form .pera{
+    margin-right: 10px;
+}
+.form .input input {
+    border-radius: 10px;
+}
+.input input:hover{
+    box-shadow: 1px 1px 10px -1px skyblue;
+}
+.form .input .button{
+    font-weight: 500;
+    font-size: 15px;
+    color: white;
+    background-color:rgb(216, 104, 39);
+    border: 1px solid rgb(216, 104, 39);
+    border-radius: 4px;
+    margin-left: 50px;
+    padding: 6px 13px;
+    text-decoration: none;
+    transition: .3s;
+
+}
+.form .input .button:hover{
+       background-color: #fff;
+       color: rgb(216, 104, 39) ;
+       box-shadow: 1px 1px 10px -1px rgb(216, 104, 39);
+}
+
+
+
+
+/* footer part? */
+
+footer{
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    
+}
+
+footer .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: #fff;
+    
+}
+footer .container .logo{
+    width: px;
+    
+}
+footer .container .logo img{
+    width: 100%;
+}
+.container .social-icon{
+    margin: auto;
+}
+.container .social-icon img{
+    width: 30px;
+}
+.container .copyright {
+    margin: auto;
+}
+.container .copyright p {
+     font-size: 14px;
+}
+
+/*----------------------------
+-----------------------------
+----------------------------
+responsive part for mobile 
+----------------------------
+-----------------------------
+------------------------------*/
+
+@media screen and (max-width:688px) {
+
+    body{
+        width: 100%;
+    }
+    .top-banner{
+        flex-direction: column;
+        height: 100%;
+        margin: 0 50px 0 -150px;
+    }
+    .top-banner .top-heading h1{
+        font-size: 35px;
+    }
+    .top-banner .banner-img {
+        width: 100%;
+        margin: 70px 0 0 0 ;
+    }
+    .top-banner .banner-img img{
+        width: 100%;
+    }
+
+    .players{
+        display: grid;
+        grid-template-columns: repeat(1 ,1fr);
+        flex-direction: column;
+        
+    }
+    .highlight{
+        flex-direction: column;
+        height: 100%;
+    }
+    .highlight .image{
+        margin-top: 30px;
+        width:300px
+    }
+    .image img{
+        width: 100%;
+    }
+    .subscribe-form{
+        padding-bottom: 20px;
+        margin-left: -100px;
+    }
+    .subscribe-form .form{
+        flex-direction: column;
+    }
+    .input a , input{
+        margin-left: 0;
+    }
+   .input{
+       margin-left: 100px;
+   }
+
+   footer .container{
+       flex-direction: column;
+   }
+   .container .logo{
+       width: 200px;
+   }
+   .logo img {
+       width: 200px;
+   }
+ 
+    
+}
